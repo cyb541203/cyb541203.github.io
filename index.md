@@ -22,9 +22,9 @@ Hi! Good to see you here.
 
 ### Top priority
 
-| Class I                                            | Class II                                                     |
-| -------------------------------------------------- | ------------------------------------------------------------ |
-| [Uniwise](./contents/(190724)uniwise/uniwise.html) | [FEA using Excel](./contents/(190724)feaExcel/feaExcel.html) |
+| ML & AI                                                      | Engineering                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [Spleeter](https://www.notion.so/goodasa/Spleeter-786c17ef84614a1ebb891dd07970068c) | [FEA using Excel](./contents/(190724)feaExcel/feaExcel.html) |
 
 
 
@@ -82,6 +82,14 @@ Hi! Good to see you here.
 
 
 
+## My channels
+
+[Youtube](https://www.youtube.com/channel/UCG7e6TPZ8rVtE7YcxCcW-VA?view_as=subscriber)
+
+[NaverBlog](http://blog.naver.com/33550336)
+
+
+
 <address>
     <font size=1>
         Written by <a href="mailto:yunbum@eri.u-tokyo.ac.jp">CHOI Yunbum</a><br> 
@@ -90,4 +98,3 @@ Hi! Good to see you here.
     </font>
 </address>
 
- 
