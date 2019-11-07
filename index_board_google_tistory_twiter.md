@@ -14,6 +14,21 @@ Hi! Good to see you here.
 
 
 
+## Board
+
+<iframe src="https://cyb541203.blogspot.com/?m=1" frameborder="0"
+    style="border:0" height="400" allowfullscreen></iframe>
+
+
+
+<iframe src="https://791203.tistory.com/" scrolling='no' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;' style="border:0" height="400"></iframe>
+
+
+
+## My Tweets
+
+<a class="twitter-timeline" data-height="600" href="https://twitter.com/goodasa?ref_src=twsrc%5Etfw">Tweets by goodasa</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ## Notes
 
 ### Top priority
@@ -22,9 +37,6 @@ Hi! Good to see you here.
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Spleeter](https://www.notion.so/goodasa/Spleeter-786c17ef84614a1ebb891dd07970068c) | [FEA using Excel](./contents/(190724)feaExcel/feaExcel.html) |
 
-
-
-<iframe src="https://791203.tistory.com/" frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;' style="border:0" height="500"></iframe>
 
 
 ## Achievements
