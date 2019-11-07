@@ -12,19 +12,24 @@ Hi! Good to see you here.
 
 *#technology #innovation #sidehusler*
 
+![](D:\github\cyb541203.github.io\image\twitter.png) ![https://www.youtube.com/channel/UCG7e6TPZ8rVtE7YcxCcW-VA?view_as=subscriber](D:\github\cyb541203.github.io\image\youtube.png) ![https://www.linkedin.com/in/yunbum-choi-25661a60/](D:\github\cyb541203.github.io\image\linkedin.png) ![](D:\github\cyb541203.github.io\image\facebook.png) ![](D:\github\cyb541203.github.io\image\instagram.png)
+
 
 
 ## Notes
 
-### Top priority
+### [CHOI's Laboratory]
 
 | ML & AI                                                      | Engineering                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Spleeter](https://www.notion.so/goodasa/Spleeter-786c17ef84614a1ebb891dd07970068c) | [FEA using Excel](./contents/(190724)feaExcel/feaExcel.html) |
 
+### [Contents]
 
+| Developer    | Hobby   |
+| ------------ | ------- |
+| ybcombinator | Ukulele |
 
-<iframe src="https://791203.tistory.com/" frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;' style="border:0" height="500"></iframe>
 
 
 ## Achievements
@@ -78,16 +83,6 @@ Hi! Good to see you here.
 ## What I love to do
 
 [5월 2일 어느 작은 까페엔 - Single](https://itunes.apple.com/us/artist//552288415)
-
-
-
-## My channels
-
-[Youtube](https://www.youtube.com/channel/UCG7e6TPZ8rVtE7YcxCcW-VA?view_as=subscriber)
-
-[LinkedIn]( https://www.linkedin.com/in/yunbum-choi-25661a60/ )
-
-[NaverBlog](http://blog.naver.com/33550336)
 
 
 
