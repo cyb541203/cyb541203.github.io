@@ -14,6 +14,17 @@ Hi! Good to see you here.
 
 
 
+## Board
+
+<iframe src="https://cyb541203.blogspot.com/?m=1" frameborder="0"
+    style="border:0" height="400" allowfullscreen></iframe>
+
+
+
+<iframe src="https://791203.tistory.com/" scrolling='no' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;' style="border:0" height="400"></iframe>
+
+
+
 ## My Tweets
 
 <a class="twitter-timeline" data-height="600" href="https://twitter.com/goodasa?ref_src=twsrc%5Etfw">Tweets by goodasa</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -30,7 +41,7 @@ Hi! Good to see you here.
 
 ## Achievements
 
-### Awards
+### [Awards]
 
 **Best Conference Paper of 2016 Fall** Korea Concrete Institute, May 2017
 
@@ -38,7 +49,7 @@ Hi! Good to see you here.
 
 
 
-### Publications and Papers
+### [Publications and Papers]
 
 **Nonlinear Finite Element Analysis for RC Shear Wall with an Opening Considering Rebar Development Length** Computational Structural Engineering Institute of Korea
 
@@ -48,7 +59,7 @@ Hi! Good to see you here.
 
 
 
-### Certifications
+### [Certifications]
 
 **Artificial Intelligence Nanodegree** Udacity, Jul 2018
 
@@ -58,7 +69,7 @@ Hi! Good to see you here.
 
 
 
-### Educations
+### [Educations]
 
 **국내 콘크리트구조물 내진 기술**, 2018.6.14, 한국콘크리트학회
 
@@ -85,6 +96,8 @@ Hi! Good to see you here.
 ## My channels
 
 [Youtube](https://www.youtube.com/channel/UCG7e6TPZ8rVtE7YcxCcW-VA?view_as=subscriber)
+
+[LinkedIn]( https://www.linkedin.com/in/yunbum-choi-25661a60/ )
 
 [NaverBlog](http://blog.naver.com/33550336)
 
