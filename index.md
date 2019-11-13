@@ -12,7 +12,7 @@ Hi! Good to see you here.
 
 *#technology #innovation #sidehusler*
 
-![](.\image\twitter.png) ![https://www.youtube.com/channel/UCG7e6TPZ8rVtE7YcxCcW-VA?view_as=subscriber](.\image\youtube.png) ![https://www.linkedin.com/in/yunbum-choi-25661a60/](.\image\linkedin.png) ![](.\image\facebook.png) ![](.\image\instagram.png)
+<a href="https://www.linkedin.com/in/yunbum-choi-25661a60/" target="_blank"><img src=".\image\linkedin.png" alt="LinkedIn"></a>  <a href=" https://twitter.com/goodasa " target="_blank"><img src=".\image\twitter.png" alt="Twitter"></a> <a href="https://www.youtube.com/channel/UCG7e6TPZ8rVtE7YcxCcW-VA?view_as=subscriber" target="_blank"><img src=".\image\youtube.png" alt="Youtube"></a>  
 
 
 
@@ -69,7 +69,7 @@ Hi! Good to see you here.
 
 **NIMS Expert training for Industrial mathematics, July 23 to 27 2018, 국가수리과학연구소**
 
-**Nuclear Global Research & Education Programme**, 11 January to 24 January 2016, Korea Nuclear International Cooperation Foundation & Institute of Multidisciplinary Research for Advanced Materials at Tohoku University
+**Nuclear Global Research & Education Program**, 11 January to 24 January 2016, Korea Nuclear International Cooperation Foundation & Institute of Multidisciplinary Research for Advanced Materials at Tohoku University
 
 **2014년 한국전력 전략지역전문가 사전육성과정(인도네시아어)**, 2014년 8월 9일 ~ 2014년 11월 1일, 한국외국어대학교 국제사회교육원
 

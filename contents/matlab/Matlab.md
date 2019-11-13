@@ -4,5 +4,5 @@
 
 # Matlab
 
-[01 Matlab 101](https://www.notion.so/goodasa/01-Matlab-101-79d6934384bd484bbb5ac5ecb649e65b)
+[01 Introduction](./lectures/01Introduction.html)
 
