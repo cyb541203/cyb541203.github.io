@@ -1,6 +1,44 @@
 <script language="javascript" type="text/javascript">
         document.write("<font color='green' size='1'>This document was last modified on " + document.lastModified + "</font>");
 </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script> 
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="name">
+        <p>
+            Hello {{name}}
+        </p>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data() {
+                return {
+                   name: 'yblabo' 
+                }
+            }
+        })
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
 # CHOI Yunbum
 
 <div><a href="https://twitter.com/intent/tweet?screen_name=goodasa&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @goodasa</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
