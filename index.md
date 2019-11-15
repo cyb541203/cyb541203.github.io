@@ -22,22 +22,13 @@
             el: "#app",
             data() {
                 return {
-                   name: 'yblabo' 
+                   name: 'World!!' 
                 }
             }
         })
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
 
 # CHOI Yunbum
 
@@ -124,6 +115,10 @@ Hi! Good to see you here.
 [5월 2일 어느 작은 까페엔 - Single](https://itunes.apple.com/us/artist//552288415)
 
 
+
+<iframe height='265' scrolling='no' src='https://cyb541203.tistory.com/' ></iframe>
+
+<iframe src=' https://791203.tistory.com/ '></iframe>
 
 <address>
     <font size=1>
