@@ -1,8 +1,32 @@
-
+<script language="javascript" type="text/javascript">
+        document.write("<font color='green' size='1'>This document was last modified on " + document.lastModified + "</font>");
+</script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flickr Gallery</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <meta content="utf-8" http-equiv="encoding"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="./css/reset.css"/>
+    <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body>
+    <div id="grid" class="grid">
+    </div>
+    <div id="lightbox" class="lightbox">
+    </div>
+    <script src="./js/containsClass.js"></script>
+    <script src="./js/jsonp.js"></script>
+    <script src="./js/grid.js"></script>
+    <script src="./js/lightbox.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
 # CHOI Yunbum
 
 <div><a href="https://twitter.com/intent/tweet?screen_name=goodasa&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @goodasa</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
-
+[TOC]
 
 ## Egalitarianism, Father, and Technology Enthusiast
 
@@ -14,17 +38,7 @@ Hi! Good to see you here.
 
 
 
-## Favorites
-
-In love with TEXT
-
-| [CNN](http://lite.cnn.io/en) |                              |                                         | [Hacker News](https://news.ycombinator.com/)                 |                                          |
-| ---------------------------- | ---------------------------- | --------------------------------------- | ------------------------------------------------------------ | ---------------------------------------- |
-|                              | [NPR](https://text.npr.org/) | [Readspike](https://readspike.com/)     | [Text Only News](https://textnews.pythonanywhere.com/english) | [Legible News](https://legiblenews.com/) |
-|                              |                              | [JimmyR](http://www.jimmyr.com/)        | [Post Online Media](https://lite.poandpo.com/)               |                                          |
-| [Cosma](http://bactra.org/)  | [Tobias](https://gir.st/)    | [Gopherpedia](https://gopherpedia.com/) | [Gwern Branwen](https://www.gwern.net/)                      | [Usenet Archives](https://yarchive.net/) |
-
-<font size=1>Inspired by [Sijmen](https://sjmulder.nl/en/textonly.html)</font>
+<iframe width='200' height='200' scrolling='no' src='http://wttr.in/' ></iframe>
 
 
 
@@ -99,50 +113,8 @@ In love with TEXT
 
 
 
-<iframe width='200' height='200' scrolling='no' src='http://wttr.in/' ></iframe>
-
-
-
-<script language="javascript" type="text/javascript">
-        document.write("<font color='green' size='1'>This document was last modified on " + document.lastModified + "</font>");
-</script>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script> 
-    <title>Document</title>
-</head>
-<body>
-    <div id="app">
-        <input type="text" v-model="name">
-        <p>
-            Hello {{name}}
-        </p>
-    </div>
-    <script>
-        new Vue({
-            el: "#app",
-            data() {
-                return {
-                   name: 'World!!' 
-                }
-            }
-        })
-    </script>
-</body>
-</html>
-
-
-
 <iframe height='265' scrolling='no' src='https://cyb541203.tistory.com/' ></iframe>
-
 <iframe src=' https://791203.tistory.com/ '></iframe>
-
-
-
 <address>
     <font size=1>
         Written by <a href="mailto:yunbum@eri.u-tokyo.ac.jp">CHOI Yunbum</a><br> 
@@ -150,3 +122,4 @@ In love with TEXT
         Earthquake Research Institute, University of Tokyo, Japan
     </font>
 </address>
+
