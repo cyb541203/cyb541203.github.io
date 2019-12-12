@@ -1,8 +1,10 @@
+<script language="javascript" type="text/javascript">
+        document.write("<font color='green' size='1'>This document was last modified on " + document.lastModified + "</font>");
+</script>
 
 # CHOI Yunbum
 
 <div><a href="https://twitter.com/intent/tweet?screen_name=goodasa&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @goodasa</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
-
 
 ## Egalitarianism, Father, and Technology Enthusiast
 
@@ -103,9 +105,6 @@ In love with TEXT
 
 
 
-<script language="javascript" type="text/javascript">
-        document.write("<font color='green' size='1'>This document was last modified on " + document.lastModified + "</font>");
-</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -137,9 +136,12 @@ In love with TEXT
 
 
 
+
+
 <iframe height='265' scrolling='no' src='https://cyb541203.tistory.com/' ></iframe>
 
 <iframe src=' https://791203.tistory.com/ '></iframe>
+
 
 
 
@@ -150,3 +152,4 @@ In love with TEXT
         Earthquake Research Institute, University of Tokyo, Japan
     </font>
 </address>
+
