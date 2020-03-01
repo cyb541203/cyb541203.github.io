@@ -22,18 +22,19 @@ My research scope involves structural analysis (but not limited to). I have been
 
 ## My Labs
 
-| Academic                                | Employability                           | For fun                                           |
-| --------------------------------------- | --------------------------------------- | ------------------------------------------------- |
-| [Monday](https://cyb541203.tistory.com) | [Tuesday](https://33550336.tistory.com) | [Wednesday](https://followingfashion.tistory.com) |
-| [Thursday](https://791203.tistory.com)  | [Friday](https://3600rpm.tistory.com)   | Weekend                                           |
+| Academic                                          | Employability                           |
+| ------------------------------------------------- | --------------------------------------- |
+| [Monday](https://cyb541203.tistory.com)           | [Tuesday](https://33550336.tistory.com) |
+| [Wednesday](https://followingfashion.tistory.com) | [Thursday](https://791203.tistory.com)  |
+| [Friday](https://3600rpm.tistory.com)             | Weekends                                |
 
 
 
-## This is who I am
+## My History 
 
 My Song: [5월 2일 어느 작은 까페엔 - Single](https://itunes.apple.com/us/artist//552288415)
 
-Achievements: [Details here if interested!!]((https://www.notion.so/goodasa/Achievements-3220510d3429437d8814a9f29c0f232c))
+Achievements: [Details here if interested!!](https://www.notion.so/Achievements-3220510d3429437d8814a9f29c0f232c)
 
 
 
