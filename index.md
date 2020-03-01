@@ -16,19 +16,16 @@ My name is CHOI Yunbum and I studied dynamics as a Research Student in the Depar
 
 My research scope involves structural analysis (but not limited to). I have been into Machine Learning with python on Nuclear industry and working on some projects. I have been striving to build up fun projects based on Data Science(Neural Network) and AR(OpenCV). 
 
-I am fascinated with my work and I have an excellent attitude to not only my work but also colleagues.
-I am constantly looking for ways how to achieve high-quality outcomes and produce result effectively. 
-
 *#technology #innovation #sidehusler*
 
 
 
-## Notes
+## My Labs
 
-| Academic                            | Employability                       | For fun                                       |
-| ----------------------------------- | ----------------------------------- | --------------------------------------------- |
-| [Monday Lab](cyb541203.tistory.com) | [Tuesday Lab](33550336.tistory.com) | [Wednesday Lab](followingfashion.tistory.com) |
-| [Thursday Lab](791203.tistory.com)  | [Friday Lab](3600rpm.tistory.com)   | Weekend Lab                                   |
+| Academic                        | Employability                   | For fun                                   |
+| ------------------------------- | ------------------------------- | ----------------------------------------- |
+| [Monday](cyb541203.tistory.com) | [Tuesday](33550336.tistory.com) | [Wednesday](followingfashion.tistory.com) |
+| [Thursday](791203.tistory.com)  | [Friday](3600rpm.tistory.com)   | Weekend                                   |
 
 
 
@@ -36,7 +33,7 @@ I am constantly looking for ways how to achieve high-quality outcomes and produc
 
 My Song: [5월 2일 어느 작은 까페엔 - Single](https://itunes.apple.com/us/artist//552288415)
 
-My Achievements: [Details are here if interested!!]((https://www.notion.so/goodasa/Achievements-3220510d3429437d8814a9f29c0f232c))
+Achievements: [Details here if interested!!]((https://www.notion.so/goodasa/Achievements-3220510d3429437d8814a9f29c0f232c))
 
 
 
