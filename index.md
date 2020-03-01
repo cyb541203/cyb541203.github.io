@@ -4,17 +4,15 @@
 
 # CHOI Yunbum
 
-<a href="https://www.linkedin.com/in/yunbum-choi-25661a60/" target="_blank"><img src=".\image\linkedin.png" alt="LinkedIn"></a>  <a href=" https://twitter.com/goodasa " target="_blank"><img src=".\image\twitter.png" alt="Twitter"></a> <a href="https://www.youtube.com/channel/UCG7e6TPZ8rVtE7YcxCcW-VA?view_as=subscriber" target="_blank"><img src=".\image\youtube.png" alt="Youtube"></a>  
+<a href="https://www.linkedin.com/in/yunbum-choi-25661a60/" target="_blank"><img src=".\image\linkedin.png" alt="LinkedIn"></a>  <a href=" https://twitter.com/goodasa " target="_blank"><img src=".\image\twitter.png" alt="Twitter"></a> <a href="https://www.youtube.com/channel/UCG7e6TPZ8rVtE7YcxCcW-VA?view_as=subscriber" target="_blank"><img src=".\image\youtube.png" alt="Youtube"></a>   *#father #egalitarianism #sidehusler*
 
 
 
 ## Hello!!
 
-My name is CHOI Yunbum and I studied dynamics as a Research Student in the Department of Architecture at the University of Tokyo. My research scope involves structural analysis. 
+My name is CHOI Yunbum and I studied dynamics as a Research Student in the Department of Architecture at the University of Tokyo.
 
 I have been into Machine Learning with python on Nuclear industry and working on some projects. I have been striving to build up fun projects based on Data Science(Neural Network) and AR(OpenCV). 
-
-*#father #egalitarianism #sidehusler*
 
 
 
@@ -35,6 +33,8 @@ My Song: [5월 2일 어느 작은 까페엔](https://itunes.apple.com/us/artist/
 Achievements: [Details if interested!!](https://www.notion.so/Achievements-3220510d3429437d8814a9f29c0f232c)
 
 
+
+## Feedbacks 
 
 <div id="disqus_thread"></div>
 <script>
