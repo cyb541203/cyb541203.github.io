@@ -4,7 +4,7 @@
 
 # CHOI Yunbum
 
-<a href="https://www.linkedin.com/in/yunbum-choi-25661a60/" target="_blank"><img src=".\image\linkedin.png" alt="LinkedIn"></a>  <a href=" https://twitter.com/goodasa " target="_blank"><img src=".\image\twitter.png" alt="Twitter"></a> <a href="https://www.youtube.com/channel/UCG7e6TPZ8rVtE7YcxCcW-VA?view_as=subscriber" target="_blank"><img src=".\image\youtube.png" alt="Youtube"></a>   *#father #egalitarianism #sidehusler*
+<a href="https://www.linkedin.com/in/yunbum-choi-25661a60/" target="_blank"><img src=".\image\linkedin.png" alt="LinkedIn"></a>  <a href=" https://twitter.com/goodasa " target="_blank"><img src=".\image\twitter.png" alt="Twitter"></a> <a href="https://www.youtube.com/channel/UCG7e6TPZ8rVtE7YcxCcW-VA?view_as=subscriber" target="_blank"><img src=".\image\youtube.png" alt="Youtube"></a>
 
 
 
