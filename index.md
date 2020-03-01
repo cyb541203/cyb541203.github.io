@@ -22,10 +22,10 @@ My research scope involves structural analysis (but not limited to). I have been
 
 ## My Labs
 
-| Academic                        | Employability                   | For fun                                   |
-| ------------------------------- | ------------------------------- | ----------------------------------------- |
-| [Monday](cyb541203.tistory.com) | [Tuesday](33550336.tistory.com) | [Wednesday](followingfashion.tistory.com) |
-| [Thursday](791203.tistory.com)  | [Friday](3600rpm.tistory.com)   | Weekend                                   |
+| Academic                                | Employability                           | For fun                                           |
+| --------------------------------------- | --------------------------------------- | ------------------------------------------------- |
+| [Monday](https://cyb541203.tistory.com) | [Tuesday](https://33550336.tistory.com) | [Wednesday](https://followingfashion.tistory.com) |
+| [Thursday](https://791203.tistory.com)  | [Friday](https://3600rpm.tistory.com)   | Weekend                                           |
 
 
 
