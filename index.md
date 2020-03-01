@@ -8,15 +8,13 @@
 
 
 
-## Egalitarianism, Father, and Technology Enthusiast
+## Hello!!
 
-Hello!! 
+My name is CHOI Yunbum and I studied dynamics as a Research Student in the Department of Architecture at the University of Tokyo. My research scope involves structural analysis. 
 
-My name is CHOI Yunbum and I studied dynamics as a Research Student in the Department of Architecture at the University of Tokyo. 
+I have been into Machine Learning with python on Nuclear industry and working on some projects. I have been striving to build up fun projects based on Data Science(Neural Network) and AR(OpenCV). 
 
-My research scope involves structural analysis (but not limited to). I have been into Machine Learning with python on Nuclear industry and working on some projects. I have been striving to build up fun projects based on Data Science(Neural Network) and AR(OpenCV). 
-
-*#technology #innovation #sidehusler*
+*#father #egalitarianism #sidehusler*
 
 
 
@@ -32,9 +30,9 @@ My research scope involves structural analysis (but not limited to). I have been
 
 ## My History 
 
-My Song: [5월 2일 어느 작은 까페엔 - Single](https://itunes.apple.com/us/artist//552288415)
+My Song: [5월 2일 어느 작은 까페엔](https://itunes.apple.com/us/artist//552288415)
 
-Achievements: [Details here if interested!!](https://www.notion.so/Achievements-3220510d3429437d8814a9f29c0f232c)
+Achievements: [Details if interested!!](https://www.notion.so/Achievements-3220510d3429437d8814a9f29c0f232c)
 
 
 
