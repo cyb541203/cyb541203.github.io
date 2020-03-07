@@ -18,11 +18,11 @@ I have been into Machine Learning with python on Nuclear industry and working on
 
 ## My Labs
 
-| Academic                                          | Employability                           |
-| ------------------------------------------------- | --------------------------------------- |
-| [Monday](https://cyb541203.tistory.com)           | [Tuesday](https://33550336.tistory.com) |
-| [Wednesday](https://followingfashion.tistory.com) | [Thursday](https://791203.tistory.com)  |
-| [Friday](https://3600rpm.tistory.com)             | Weekends                                |
+| Academic                                                     | Employability                                                |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [Monday](https://www.notion.so/goodasa/Monday-Labo-ee3777e4b236453d9db239c4320308ca) | [Tuesday](https://www.notion.so/goodasa/Tuesday-Labo-62de7273c21d47b69e3e0c1818655778) |
+| [Wednesday](https://www.notion.so/goodasa/Wednesday-Labo-96f3733892034fdc858d97db92d4ca19) | [Thursday](https://www.notion.so/goodasa/Thursday-Labo-c63bdfac7fa64b0dbff926957def10e9) |
+| [Friday](https://www.notion.so/goodasa/Friday-Labo-1230451930c14ce8b63a4677037c07f1) | [Weekends](https://www.notion.so/goodasa/Weekends-Labo-23750be6913348b89e01f8eadd870175) |
 
 
 
