@@ -32,7 +32,7 @@ My Song: [5월 2일 어느 작은 까페엔](https://itunes.apple.com/us/artist/
 
 Achievements: [Details if interested!!](https://www.notion.so/Achievements-3220510d3429437d8814a9f29c0f232c)
 
-
+and… [Here is my CV!!](https://www.notion.so/goodasa/CV-2964705fecbb4134b6158302315c189e)
 
 ## Feedbacks 
 
