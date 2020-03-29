@@ -1,8 +1,0 @@
-<script language="javascript" type="text/javascript">
-        document.write("<font color='green' size='1'>This document was last modified on " + document.lastModified + "</font>");
-</script>
-
-# Matlab
-
-[01 Introduction](./lectures/01Introduction.html)
-

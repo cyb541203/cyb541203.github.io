@@ -1,0 +1,639 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>plan</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --node-fill:  #ECECFF; --node-border:  #CCCCFF; --note-fill:  #fff5ad; --note-border:  #aaaa33; --cluster-fill:  #ffffde  !important; --cluster-border:  #aaaa33  !important; }
+.mermaid .label { color: var(--text-color); }
+.node rect, .node circle, .node ellipse, .node polygon { fill: var(--node-fill); stroke: var(--node-border); stroke-width: 1px; }
+.edgePath .path { stroke: var(--text-color); }
+.edgeLabel { background-color: var(--bg-color); }
+.cluster rect { fill: rgb(255, 255, 222) !important; rx: 4px !important; stroke: rgb(170, 170, 51) !important; stroke-width: 1px !important; }
+.cluster text { fill: var(--text-color); }
+.actor { stroke: var(--node-border); fill: var(--node-fill); }
+text.actor { fill: var(--text-color); stroke: none; }
+.actor-line { stroke: grey; }
+.messageLine0 { stroke-width: 1.5px; stroke: var(--text-color); }
+.messageLine1 { stroke-width: 1.5px; stroke: var(--text-color); }
+#arrowhead { fill: var(--text-color); }
+#crosshead path { fill: var(--text-color)  !important; stroke: var(--text-color)  !important; }
+.messageText { fill: var(--text-color); stroke: none; }
+.labelBox { stroke: var(--node-border); fill: var(--node-fill); }
+.labelText { fill: var(--text-color); stroke: none; }
+.loopText { fill: var(--text-color); stroke: none; }
+.loopLine { stroke-width: 2px; stroke: var(--node-border); }
+.note { stroke: var(--note-border); fill: var(--note-fill); }
+.noteText { fill: var(--text-color); stroke: none; font-size: 14px; }
+.section { stroke: none; opacity: 0.2; }
+.section0 { fill: rgba(102, 102, 255, 0.490196); }
+.section2 { fill: rgb(255, 244, 0); }
+.section1, .section3 { fill: white; opacity: 0.2; }
+.sectionTitle0 { fill: var(--text-color); }
+.sectionTitle1 { fill: var(--text-color); }
+.sectionTitle2 { fill: var(--text-color); }
+.sectionTitle3 { fill: var(--text-color); }
+.sectionTitle { text-anchor: start; font-size: 11px; }
+.grid .tick { stroke: lightgrey; opacity: 0.3; shape-rendering: crispedges; }
+.grid path { stroke-width: 0px; }
+.today { fill: none; stroke: red; stroke-width: 2px; }
+.task { stroke-width: 2px; }
+.taskText { text-anchor: middle; font-size: 11px; }
+.taskTextOutsideRight { fill: black; text-anchor: start; font-size: 11px; }
+.taskTextOutsideLeft { fill: black; text-anchor: end; font-size: 11px; }
+.taskText0, .taskText1, .taskText2, .taskText3 { fill: white; }
+.task0, .task1, .task2, .task3 { fill: rgb(138, 144, 221); stroke: rgb(83, 79, 188); }
+.taskTextOutside0, .taskTextOutside2 { fill: var(--text-color); }
+.taskTextOutside1, .taskTextOutside3 { fill: var(--text-color); }
+.active0, .active1, .active2, .active3 { fill: rgb(191, 199, 255); stroke: rgb(83, 79, 188); }
+.activeText0, .activeText1, .activeText2, .activeText3 { fill: black !important; }
+.done0, .done1, .done2, .done3 { stroke: grey; fill: lightgrey; stroke-width: 2px; }
+.doneText0, .doneText1, .doneText2, .doneText3 { fill: black !important; }
+.crit0, .crit1, .crit2, .crit3 { stroke: rgb(255, 136, 136); fill: red; stroke-width: 2px; }
+.activeCrit0, .activeCrit1, .activeCrit2, .activeCrit3 { stroke: rgb(255, 136, 136); fill: rgb(191, 199, 255); stroke-width: 2px; }
+.doneCrit0, .doneCrit1, .doneCrit2, .doneCrit3 { stroke: rgb(255, 136, 136); fill: lightgrey; stroke-width: 2px; cursor: pointer; shape-rendering: crispedges; }
+.doneCritText0, .doneCritText1, .doneCritText2, .doneCritText3 { fill: black !important; }
+.activeCritText0, .activeCritText1, .activeCritText2, .activeCritText3 { fill: black !important; }
+.titleText { text-anchor: middle; font-size: 18px; fill: black; }
+.node text { font-size: 14px; }
+div.mermaidTooltip { position: absolute; text-align: center; max-width: 200px; padding: 2px; font-size: 12px; background-color: rgb(255, 255, 222); border: 1px solid rgb(170, 170, 51); border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; pointer-events: none; z-index: 100; background-position: initial initial; background-repeat: initial initial; }
+#write .md-diagram-panel .md-diagram-panel-preview div { }
+
+
+:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: 'Lucida Console',Consolas,'Courier',monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.701961); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid-page; break-before: avoid-page; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid-page; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: '.'; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: 'Segoe UI Symbol', sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror-scroll { overflow-y: hidden; overflow-x: auto; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; white-space: nowrap; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; border: none !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; border-width: 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; background-position: 0px 0px; background-repeat: initial initial; }
+.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: -webkit-fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right-style: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-style: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background-color: rgba(255, 255, 0, 0.4); background-position: initial initial; background-repeat: initial initial; }
+@media print { 
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export' >
+<div  id='write'  class = 'is-mac'><script language="javascript" type="text/javascript">
+        document.write("<font color='green' size='1'>This document was last modified on " + document.lastModified + "</font>");
+</script><div class='md-toc' mdtype='toc'><p class="md-toc-content"><span class="md-toc-item md-toc-h2" data-ref="n3"><a class="md-toc-inner" style="" href="#(190702)confirmed-by-kusunoki-sensei">(190702)Confirmed by Kusunoki sensei</a></span><span class="md-toc-item md-toc-h2" data-ref="n32"><a class="md-toc-inner" style="" href="#research-plan(deprecated)">Research plan(deprecated)</a></span><span class="md-toc-item md-toc-h3" data-ref="n34"><a class="md-toc-inner" style="" href="#title:-application-of-machine-learning-in-predictions-of-the-minimum-number-of-sensors-and-the-optimal-locations-of-sensors-for-structural-health-monitoring">Title: Application of machine learning in predictions of the minimum number of sensors and the optimal locations of sensors for structural health monitoring</a></span><span class="md-toc-item md-toc-h3" data-ref="n52"><a class="md-toc-inner" style="" href="#ai-product-manager">AI Product Manager</a></span><span class="md-toc-item md-toc-h3" data-ref="n65"><a class="md-toc-inner" style="" href="#sensor-fusion-engineer">Sensor Fusion Engineer</a></span><span class="md-toc-item md-toc-h3" data-ref="n86"><a class="md-toc-inner" style="" href="#%EB%B8%8C%EB%A0%88%EC%9D%B8%EC%8A%A4%ED%86%A0%EB%B0%8D">브레인스토밍</a></span><span class="md-toc-item md-toc-h2" data-ref="n121"><a class="md-toc-inner" style="" href="#study">Study</a></span><span class="md-toc-item md-toc-h3" data-ref="n122"><a class="md-toc-inner" style="" href="#fantilli-%EA%B5%90%EC%88%98%EB%85%BC%EB%AC%B8">Fantilli 교수논문</a></span><span class="md-toc-item md-toc-h3" data-ref="n134"><a class="md-toc-inner" style="" href="#%EC%BF%A0%EC%88%98%EB%85%B8%EA%B8%B0-%EC%84%BC%EC%84%B8%EC%9D%B4-%EB%85%BC%EB%AC%B8">쿠수노기 센세이 논문</a></span><span class="md-toc-item md-toc-h2" data-ref="n136"><a class="md-toc-inner" style="" href="#"> </a></span><span class="md-toc-item md-toc-h2" data-ref="n143"><a class="md-toc-inner" style="" href="#resources">Resources</a></span><span class="md-toc-item md-toc-h2" data-ref="n161"><a class="md-toc-inner" style="" href="#references">References</a></span></p></div><h2><a name="(190702)confirmed-by-kusunoki-sensei" class="md-header-anchor"></a><span>(190702)Confirmed by Kusunoki sensei</span></h2><p><strong><span>Title: Application of deep learning in predictions of the minimum number of sensors and the optimal locations of sensors for structural health monitoring (SHM)</span></strong></p><p>&nbsp;</p><p><strong><span>[Introduction]</span></strong></p><p><span>As repairing and enhancing existing reinforced concrete structures have taken place in the field of structural engineering, monitoring the performance and structural integrity of structures has been recognized as a high priority. </span></p><p><span>Thus, reinforced concrete structures usually require as many sensors as possible to monitor their health condition to assure the safety of structures.</span></p><p><span>However, it is not easy to estimate:</span></p><ol start='' ><li><span>how many arrays of connected sensors are required and where to install the sensors</span></li><li><span>how to track the locations of damages using the optimal number of sensors</span></li><li><span>how to assess the condition of structures </span>
+<span>In the research, deep learning will be introduced as a good candidate to analyze three issues above. </span></li></ol><p>&nbsp;</p><p><strong><span>[Creating  Datasets for deep learning model and validation model]</span></strong></p><p><span>In the research, two types of datasets will be prepared: </span></p><ol><li><span>Dataset from E-Defense test</span></li></ol><ol start='2' ><li><span>Dataset from non-destructive and destructive test data from existing structures </span></li></ol><p><span>Since E-Defense has gained popularity in recent years among researchers all over the world, sensor data from E-Defense test results will be used as a dataset for deep learning. </span></p><p><span>For the validation, non-destructive and destructive test data from existing structures will be used to ensure the model is generalizable. </span></p><p><span>Therefore, it can be found out that how well the model based on E-Defense estimate the most severe possible damages.</span></p><p>&nbsp;</p><p><strong><span>[Building a Model]</span></strong></p><p><span>In the research, three deep learning models will be introduced:</span></p><ol start='' ><li><span>Model for the optimal number of sensors and location of sensors</span></li><li><span>Model for tracking the locations of damages using supervised learning (Classification)</span></li><li><span>Model for assessing the condition of structures using unsupervised learning (Clustering)</span>
+<span>Since E-Defense provides precise load combinations, accelerometer, displacement meter data, Convolution neural network (CNN) will be used to figure out three models above.</span></li></ol><p>&nbsp;</p><p><strong><span>[Solution]</span></strong>
+<span>As a result of the research, a new SHM process for existing structures will be proposed to reduce maintenance costs and increase the lifetime of structures.</span></p><p>&nbsp;</p><h2><a name="research-plan(deprecated)" class="md-header-anchor"></a><span>Research plan(deprecated)</span></h2><p>&nbsp;</p><h3><a name="title:-application-of-machine-learning-in-predictions-of-the-minimum-number-of-sensors-and-the-optimal-locations-of-sensors-for-structural-health-monitoring" class="md-header-anchor"></a><span>Title: Application of machine learning in predictions of the minimum number of sensors and the optimal locations of sensors for structural health monitoring</span></h3><p>&nbsp;</p><p><span>As repairing and enhancing existing reinforced concrete structures have taken place in the field of structural engineering, monitoring the performance and structural integrity of structures has been recognized as a high priority. With this manner, structural health monitoring (SHM) with sensors has become an essential part of the field of structural engineering. </span></p><p><span>Thus, reinforced concrete structures usually require as many sensors as possible to monitor their health condition to assure the safety of structures.</span></p><p><span>However, it is not easy to estimate how many arrays of connected sensors are required and where to install the sensors due to the complexity of structures&#39; design and maintenance cost of the SHM system.</span></p><p><span>Therefore, in my research, I will implement a neural network to make predictions of the minimum number of sensors and the optimal locations of sensors in a cost-effective manner.</span></p><p>&nbsp;</p><p><span>[Creating a Dataset]</span></p><p><span>At first, I will focus on non-destructive and destructive tests from extracted beams to figure out the most severe possible damages based on locations of test points. Then I will build a classification system that can help flag serious cases of failures.</span></p><p><span>[Building a Model]</span></p><p><span>And I will build a neural network to carry out predictions on the structural dataset from destructive and non-destructive tests and evaluate the results of a model using automated machine learning. Then, I will implement the model with different variants of the structural data to evaluate how the data affects performance of structures. In this step, sensors location and the number of sensors will be discussed as a result of the model.</span></p><p><span>[Measuring Impact and Updating Models]</span></p><p><span>For the integrity of the model, post-deployment impact of sensors location and the number of sensors will be evaluated. I will update the model to avoid unwanted bias, ensure security, and compliance to develop the business cases.</span></p><p><span>My research would take advantage of reducing maintenance costs and increasing the lifetime of structures.</span></p><p>&nbsp;</p><div class="md-diagram-panel"><svg id="mermaidChart0" xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 968.0078125 616" style=""><style></style><style>#mermaidChart0 {
+    color: rgb(51, 51, 51);
+    font: normal normal normal 14.399999618530273px/23px 'Lucida Console', Consolas, Courier, monospace;
+  }</style><g transform="translate(32, 32)"><g class="output"><g class="clusters"><g class="cluster" id="subGraph1" transform="translate(196.7734375,276)" style="opacity: 1;"><rect width="353.546875" height="512" x="-176.7734375" y="-256"></rect><g class="label"><g transform="translate(0,0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"></div></foreignObject></g></g><text x="0" y="-242" fill="black" stroke="none" id="mermaidChart0Text" style="text-anchor: middle;">Process</text></g><g class="cluster" id="subGraph0" transform="translate(638.77734375,217)" style="opacity: 1;"><rect width="490.4609375" height="394" x="-245.23046875" y="-197"></rect><g class="label"><g transform="translate(0,0)"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"></div></foreignObject></g></g><text x="0" y="-183" fill="black" stroke="none" id="mermaidChart0Text" style="text-anchor: middle;">Modeling</text></g></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M663.8828125,88L663.8828125,136L663.8828125,195.5" marker-end="url(#arrowhead78)" style="fill:none;stroke-width:2px;stroke-dasharray:3;"></path><defs><marker id="arrowhead78" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1px; stroke-dasharray: 1px, 0px;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M632.875,229.94137931034481L497.359375,286.5L497.359375,323" marker-end="url(#arrowhead79)" style="fill:none"></path><defs><marker id="arrowhead79" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M662.6139838129496,238.5L659.78125,286.5L659.78125,323" marker-end="url(#arrowhead80)" style="fill:none"></path><defs><marker id="arrowhead80" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M694.890625,232.22830407419676L805.3984375,286.5L805.3984375,323" marker-end="url(#arrowhead81)" style="fill:none"></path><defs><marker id="arrowhead81" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 0 0 L 0 0 z"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M252.09459307553956,88L165.8203125,136L165.8203125,184" marker-end="url(#arrowhead82)" style="fill:none"></path><defs><marker id="arrowhead82" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1px; stroke-dasharray: 1px, 0px;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M165.8203125,250L165.8203125,286.5L165.8203125,334.5" marker-end="url(#arrowhead83)" style="fill:none"></path><defs><marker id="arrowhead83" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1px; stroke-dasharray: 1px, 0px;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M165.8203125,377.5L165.8203125,414L165.8203125,439L190.61029905913978,464" marker-end="url(#arrowhead84)" style="fill:none"></path><defs><marker id="arrowhead84" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1px; stroke-dasharray: 1px, 0px;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M238.734375,472.99968659406096L311.640625,439L311.640625,414L311.640625,356L311.640625,286.5L311.640625,217L311.640625,136L297.20447392086334,88" marker-end="url(#arrowhead85)" style="fill:none"></path><defs><marker id="arrowhead85" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1px; stroke-dasharray: 1px, 0px;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M304.8464478417266,88L336.34375,136L632.875,209.33180679785332" marker-end="url(#arrowhead86)" style="stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead86" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1px; stroke-dasharray: 1px, 0px;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(663.8828125,136)" style="opacity: 1;"><g transform="translate(-75.6171875,-23)" class="label"><foreignObject width="151.234375" height="46"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Approaching<br>a specific problem</span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(165.8203125,136)" style="opacity: 1;"><g transform="translate(-96.6171875,-11.5)" class="label"><foreignObject width="193.234375" height="23"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Build predictive models</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(165.8203125,286.5)" style="opacity: 1;"><g transform="translate(-92.421875,-11.5)" class="label"><foreignObject width="184.84375" height="23"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Using suitable metrics</span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(311.640625,286.5)" style="opacity: 1;"><g transform="translate(-29.40625,-11.5)" class="label"><foreignObject width="58.8125" height="23"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Iterate</span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node" id="al" transform="translate(290.73828125,66.5)" style="opacity: 1;"><rect rx="0" ry="0" x="-39.40625" y="-21.5" width="78.8125" height="43"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-29.40625,-11.5)"><foreignObject width="58.8125" height="23"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Auto ML</div></foreignObject></g></g></g><g class="node" id="cpm" transform="translate(165.8203125,217)" style="opacity: 1;"><rect rx="0" ry="0" x="-110.8203125" y="-33" width="221.640625" height="66"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-100.8203125,-23)"><foreignObject width="201.640625" height="46"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Compare the performances<br> of learned models</div></foreignObject></g></g></g><g class="node" id="pt" transform="translate(165.8203125,356)" style="opacity: 1;"><rect rx="0" ry="0" x="-47.8125" y="-21.5" width="95.625" height="43"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-37.8125,-11.5)"><foreignObject width="75.625" height="23"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Prototype</div></foreignObject></g></g></g><g class="node" id="t" transform="translate(211.9296875,485.5)" style="opacity: 1;"><rect rx="0" ry="0" x="-26.8046875" y="-21.5" width="53.609375" height="43"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-16.8046875,-11.5)"><foreignObject width="33.609375" height="23"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Test</div></foreignObject></g></g></g><g class="node" id="m" transform="translate(663.8828125,217)" style="opacity: 1;"><rect rx="0" ry="0" x="-31.0078125" y="-21.5" width="62.015625" height="43"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-21.0078125,-11.5)"><foreignObject width="42.015625" height="23"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Model</div></foreignObject></g></g></g><g class="node" id="ul" transform="translate(497.359375,356)" style="opacity: 1;"><rect rx="0" ry="0" x="-60.4140625" y="-33" width="120.828125" height="66"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-50.4140625,-23)"><foreignObject width="100.828125" height="46"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Unsupervised<br>Learning</div></foreignObject></g></g></g><g class="node" id="sl" transform="translate(659.78125,356)" style="opacity: 1;"><rect rx="0" ry="0" x="-52.0078125" y="-33" width="104.015625" height="66"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-42.0078125,-23)"><foreignObject width="84.015625" height="46"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Supervised<br>Learning</div></foreignObject></g></g></g><g class="node" id="dl" transform="translate(805.3984375,356)" style="opacity: 1;"><rect rx="0" ry="0" x="-43.609375" y="-33" width="87.21875" height="66"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-33.609375,-23)"><foreignObject width="67.21875" height="46"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Deep<br>Learning</div></foreignObject></g></g></g><g class="node" id="ml" transform="translate(663.8828125,66.5)" style="opacity: 1;"><rect rx="0" ry="0" x="-77.2109375" y="-21.5" width="154.421875" height="43"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-67.2109375,-11.5)"><foreignObject width="134.421875" height="23"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Machine Learning</div></foreignObject></g></g></g></g></g></g></svg></div><p>&nbsp;</p><p>&nbsp;</p><h3><a name="ai-product-manager" class="md-header-anchor"></a><span>AI Product Manager</span></h3><p><a href='https://d20vrrgs8k4bvw.cloudfront.net/documents/en-US/AI+Product+Manager+Nanodegree+Program+Syllabus.pdf' target='_blank' class='url'>https://d20vrrgs8k4bvw.cloudfront.net/documents/en-US/AI+Product+Manager+Nanodegree+Program+Syllabus.pdf</a></p><p><strong><span>01 Introduction to AI in Business</span></strong>
+<span>Gain foundational knowledge of AI and machine learning, how to develop a business case for an AI application, and how and when to use AI in a product.</span></p><p><strong><span>02 Creating a Dataset</span></strong>
+<span>A high-quality training data set is essential for machine learning models. Learn how to create a high-quality dataset, including how well the data fits a particular use case.</span></p><p><u><span>Create a Medical Image Annotation Data Set with Figure Eight</span></u></p><p><span>In this project, you will create an annotated training data set on Figure Eight’s platform. You’ll build a classification system that can help flag serious cases of pneumonia.</span></p><p><strong><span>03 Building a Model</span></strong>
+<span>Learn how a neural network produces a decision and how “training” works. You’ll also learn how to use training data and how to evaluate the results of a model.</span></p><p><u><span>Build a Model with Google AutoML</span></u></p><p><span>Build models using automated machine learning, from data to results with no coding required. You’ll implement your model with four different variants of data to evaluate how the data affects performance.</span></p><p><strong><span>04 Measuring Impact and Updating Models</span></strong>
+<span>Learn how to measure post-deployment impact, and how to make data-informed improvements on your model. You’ll also learn how to avoid unwanted bias, ensure security and compliance, and how to scale your product.</span></p><p><u><span>Capstone Project</span></u></p><p><span>Develop a business proposal for an AI product for a use case of your choosing. You’ll develop the business case, define success metrics, scope the dataset and build a post-deployment monitoring plan.</span></p><p>&nbsp;</p><h3><a name="sensor-fusion-engineer" class="md-header-anchor"></a><span>Sensor Fusion Engineer</span></h3><p><a href='https://d20vrrgs8k4bvw.cloudfront.net/documents/en-US/Sensor+Fusion+Engineer+Nanodegree+Syllabus.pdf' target='_blank' class='url'>https://d20vrrgs8k4bvw.cloudfront.net/documents/en-US/Sensor+Fusion+Engineer+Nanodegree+Syllabus.pdf</a></p><p><span>Learn to fuse data from three of the primary sensors that robots use: lidar, camera, and radar.</span></p><p><strong><span>01 Lidar</span></strong></p><p><span>Process raw lidar data with filtering, segmentation, and clustering to detect other vehicles on the road.</span></p><p><u><span>Lidar Obstacle Detection</span></u></p><p><span>Detect other cars on the road using raw lidar data from Udacity’s real self-driving car, Carla! Implement custom ransac and euclidean clustering algorithms.</span></p><p><strong><span>02 Radar</span></strong></p><p><span>Analyze radar signatures to detect and track objects. Calculate velocity and orientation by correcting for radial velocity distortions, noise, and occlusions.</span></p><p><u><span>Radar Obstacle Detection</span></u></p><p><span>Calibrate, threshold, and filter radar data to detect obstacles in real radar data.</span></p><p><strong><span>03 Cameras</span></strong></p><p><span>Fuse camera images together with lidar point cloud data. You&#39;ll extract object features, classify objects, and project the camera image into three dimensions to fuse with lidar data.</span></p><p><u><span>Camera and Lidar Fusion</span></u></p><p><span>Detect and track objects from the benchmark KITTI dataset. Classify those objects and project them into three dimensions. Fuse those projections together with lidar data to create 3D objects to track over time.</span></p><p><strong><span>04 Kalman Filters</span></strong></p><p><span>Fuse data from multiple sources using Kalman filters, and build extended and unscented Kalman filters for tracking nonlinear movement.</span></p><p><u><span>Unscented Kalman Filters</span></u></p><p><span>Put your skills to the test! Code an Unscented Kalman Filter in C++ to track highly non-linear pedestrian and bicycle motion.</span></p><p>&nbsp;</p><p>&nbsp;</p><h3><a name="%EB%B8%8C%EB%A0%88%EC%9D%B8%EC%8A%A4%ED%86%A0%EB%B0%8D" class="md-header-anchor"></a><span>브레인스토밍</span></h3><p><span>Data 수집 ➔ Numerical simuation ➔ 센서 최적수량 및 위치</span></p><p>&nbsp;</p><p><span>01) Data 수집</span></p><ul><li><p><span>Bending, sheer, and torsion에 의해서 가장 많이 영향받는 부분을 찾는다</span></p></li><li><p><a href='https://www.sciencedirect.com/science/article/pii/S095006181300500X' target='_blank' title='An experimental study on the within-member variability of in situ concrete strength in RC building structures'><span>NDT 및 DT 수행논문을 찾는다</span></a><span> possible damage를 찾기위한 목적임</span></p><ul><li><span>Non-destructive (rebound number and ultrasonic velocity) and destructive (cores) tests</span></li><li><span>Extracted beam</span></li><li><span>각 specimen의 Location of test points를 기준으로 찾는다</span></li></ul></li></ul><p><span>02) Numerical simulation</span></p><ul><li><span>ML/DL 을 통해 찾는다</span></li><li><a href='https://arxiv.org/abs/1805.08620' target='_blank' title='Wavelet Convolutional Neural Networks'><span>이 부분에 wavelet CNN 들어감</span></a></li><li><span>Statistical analysis를 활용함</span></li></ul><p><span>03) 센서의 수량과 위치를 결정</span></p><p>&nbsp;</p><p><span>나중에 검증은 defense test를 통해서 가능함</span></p><ul><li><span>일단 센서의 위치와 최소수량을 예측하고</span></li><li><span>실제 실험 후 결과와 비교해보면 됨 </span></li><li><span>그러면 이게 잘 맞는 모델인지 알수 있음</span></li></ul><p>&nbsp;</p><h2><a name="study" class="md-header-anchor"></a><span>Study</span></h2><h3><a name="fantilli-%EA%B5%90%EC%88%98%EB%85%BC%EB%AC%B8" class="md-header-anchor"></a><span>Fantilli 교수논문</span></h3><p><span>Assessment of concrete strength</span></p><ul><li><span>design retrofits and/or</span></li><li><span>conservation(보호) of existing reinforced concrete structure</span></li></ul><p><span>Destructive test</span></p><p><span>Using cores extracted from structural elements which requires</span></p><p><span>This can be applied to 센서의 위치 및 수량의 결정</span></p><p>&nbsp;</p><p>&nbsp;</p><h3><a name="%EC%BF%A0%EC%88%98%EB%85%B8%EA%B8%B0-%EC%84%BC%EC%84%B8%EC%9D%B4-%EB%85%BC%EB%AC%B8" class="md-header-anchor"></a><span>쿠수노기 센세이 논문</span></h3><p><span>Curve decomposition: 커브의 분해</span></p><h2><a name="" class="md-header-anchor"></a><span> </span></h2><p><span>[01] Fantilli 교수 논문</span></p><p><span>[03]: 쿠수노기 센세이 논문</span></p><p><span>[02]: </span><a href='https://terms.naver.com/entry.nhn?docId=3338565&cid=42346&categoryId=42346'><span>웨이브릿 변환</span></a></p><p><span>04 </span><a href='https://en.wikipedia.org/wiki/Wavelet_transform'><span>Wavelet transform</span></a></p><p><span>05 </span><a href='https://arxiv.org/abs/1805.08620'><span>Wavelet Convolutional Neural Networks</span></a></p><p>&nbsp;</p><h2><a name="resources" class="md-header-anchor"></a><span>Resources</span></h2><p><strong><span>01</span></strong><span> Seismic Health Monitoring of a Space Reinforced Concrete Frame Structure Using Piezoceramic-Based Sensors</span></p><p><a href='https://ascelibrary.org/doi/full/10.1061/(ASCE)AS.1943-5525.0000999'><span>https://ascelibrary.org/doi/full/10.1061/%28ASCE%29AS.1943-5525.0000999</span></a></p><p><strong><span>02</span></strong><span> Current Challenges for Structural Health Monitoring Systems</span></p><p><a href='https://www.sensuron.com/industry-news/structural-health-monitoring-systems/' target='_blank' class='url'>https://www.sensuron.com/industry-news/structural-health-monitoring-systems/</a></p><p><strong><span>03</span></strong><span> Why We Need Structural Health Monitoring?</span></p><p><a href='https://www.fprimec.com/why-we-need-structural-health-monitoring/' target='_blank' class='url'>https://www.fprimec.com/why-we-need-structural-health-monitoring/</a></p><p><strong><span>04</span></strong><span> Introduction to Structural Health Monitoring</span></p><p><a href='http://www.iste.co.uk/data/doc_xqjujdlhnfls.pdf' target='_blank' class='url'>http://www.iste.co.uk/data/doc_xqjujdlhnfls.pdf</a></p><p><strong><span>05</span></strong><span> Structural health monitoring</span></p><p><a href='https://en.wikipedia.org/wiki/Structural_health_monitoring' target='_blank' class='url'>https://en.wikipedia.org/wiki/Structural_health_monitoring</a></p><p><strong><span>06</span></strong><span> Architectural design values</span></p><p><a href='https://en.wikipedia.org/wiki/Architectural_design_values' target='_blank' class='url'>https://en.wikipedia.org/wiki/Architectural_design_values</a></p><p><strong><span>07</span></strong><span> Finding the sensors location and the number of sensors in sensor networks with a genetic algorithm</span></p><p><a href='https://ieeexplore.ieee.org/document/4772651' target='_blank' class='url'>https://ieeexplore.ieee.org/document/4772651</a></p><p><strong><span>08</span></strong><span> What is Machine Learning?</span></p><p><a href='https://heartbeat.fritz.ai/what-is-machine-learning-fd7e4dd24479' target='_blank' class='url'>https://heartbeat.fritz.ai/what-is-machine-learning-fd7e4dd24479</a></p><p>&nbsp;</p><h2><a name="references" class="md-header-anchor"></a><span>References</span></h2></div>
+</body>
+</html>

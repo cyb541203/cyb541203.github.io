@@ -16,6 +16,14 @@ I have been into Machine Learning with python on Nuclear industry and working on
 
 
 
+## What I am focusing on…
+
+[Fukuichi](.\contents\(200329)fukuichi\fukuichi.html)
+
+[Research_Plan](./contents/(190617)research_plan/plan.html)
+
+
+
 ## My Labs
 
 | Academic                                                     | Employability                                                |
